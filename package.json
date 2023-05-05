@@ -1,0 +1,24 @@
+{
+  "name": "vue-project",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+   "dependencies": {
+    "@cornerstonejs/calculate-suv": "^1.0.3",
+    "@cornerstonejs/core": "^0.44.0",
+    "@cornerstonejs/dicom-image-loader": "^0.5.0",
+    "@cornerstonejs/streaming-image-volume-loader": "^0.18.0",
+    "@cornerstonejs/tools": "^0.65.0",
+    "dcmjs": "^0.29.6",
+    "dicomweb-client": "^0.10.2",
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.1.4"
+  }
+}
