@@ -15,7 +15,14 @@ It looks like the `vite` can't find the webworker-file. In the `dicom-image-load
 
 > correct [config](https://cn.vitejs.dev/guide/features.html#web-workers) in vite may help us to solve this problem.
 
-
+## New problem after solving the first one
+When I find those missing files, I put them in the `src` folder and run the code again. The error is like this:
+```sh
+decodeImageFrame.ts:266  Uncaught (in promise) ReferenceError: SharedArrayBuffer is not defined
+    at decodeImageFrame.ts:266:51
+    at U (decodeImageFrame.ts:154:25)
+    at async Object.handler (decodeTask.ts:51:9)
+```
 
 
 
