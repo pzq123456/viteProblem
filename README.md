@@ -1,7 +1,19 @@
-# vue-project
-> This respository just foucs on the problem.
-> - Thanks for your help.
+# cornerstone3D-vite config problem and one possible solution
+> Thanks for the help from [sedghi](https://github.com/sedghi)
+> There must be some more elegant solutions, but this is the one worked for me. If you have any better ideas, please let me know in the issue or PR.
 
+- find the `dynamic-import` folder in the `dicom-image-loader` package and copy it to the `src` folder.
+- add the following code in the `vite.config.js` file:
+```js
+server: {
+    headers: {
+        'Cross-Origin-Embedder-Policy': 'require-corp',
+        'Cross-Origin-Opener-Policy': 'same-origin'
+    }
+  }
+```
+> - see the [issue](https://github.com/cornerstonejs/cornerstone3D-beta/issues/594)
+> - If you meet the `304` problem, you can try "CTRL + F5" to refresh the page.
 
 ## Background
 > see the related [issue](https://github.com/cornerstonejs/cornerstone3D-beta/issues/594) in [cornerstone3D-beta](https://github.com/cornerstonejs/cornerstone3D-beta).
@@ -23,8 +35,6 @@ decodeImageFrame.ts:266  Uncaught (in promise) ReferenceError: SharedArrayBuffer
     at U (decodeImageFrame.ts:154:25)
     at async Object.handler (decodeTask.ts:51:9)
 ```
-
-
 
 
 
