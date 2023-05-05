@@ -1,14 +1,22 @@
 # vue-project
+> This respository just foucs on the problem.
+> - Thanks for your help.
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+## Background
+> - [vite-webworker](https://vitejs.dev/guide/features.html#web-workers)
+> see the related [issue](https://github.com/cornerstonejs/cornerstone3D-beta/issues/594) in [cornerstone3D-beta](https://github.com/cornerstonejs/cornerstone3D-beta).
+When we use vite to run the example code, we can't get the webworker-file and the error is like this:
+```sh
+:5173/src/index.worker.ea71efba2ce63c499055.worker.js:1 
+        Failed to load resource: the server responded with a status of 404 (Not Found)
+:5173/src/index.worker.ea71efba2ce63c499055.worker.js:1 
+```
+It looks like the `vite` can't find the webworker-file. In the `dicom-image-loader` package, we can find that the worker files have been built in the `dynamic-import` folder. 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+
 
 ## Project Setup
 
